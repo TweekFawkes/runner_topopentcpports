@@ -1,6 +1,6 @@
 runner:
   name: Top Open TCP Ports
-  description: TCP port scans a target and return a list of open TCP ports. Trys TCP Ports 0 thru 65535 (-p 0-65535 -ep 25 -csv -sa).
+  description: TCP port scans a target and return a list of open TCP ports. Trys Top TCP Ports (-p 80,443,22,21,23,25,161,8080,8081,8082,8083,8443,8888,10000,4567,3389,110,3306,5432,5900,1723,587,993,995,7547,5555 -ep 25 -sa -csv).
   version: 0.0.1
 
 build:
@@ -25,4 +25,4 @@ webform:
 
 launch:
   type: binary
-  command: /go/bin/naabu -p 80,443,22,21,23,25,161,8080,8081,8082,8083,8443,8888,10000,4567,3389,110,3306,5432,5900,1723,587,993,995,7547,5555 -ep 25 -sa -csv -o outputs/scan_output.csv -host ${host_to_scan}
+  command: /go/bin/naabu -p 80,443,21,25,8080,23,53,554,22,143,110,5060,7070,993,  ### 22,21,23,25,161,8080,8081,8082,8083,8443,8888,10000,4567,3389,110,3306,5432,5900,1723,587,993,995,7547,5555 -ep 25 -sa -csv -o outputs/scan_output.csv -host ${host_to_scan}
